@@ -1,0 +1,40 @@
+<template>
+    <lightning-card  title="Modelo de carro">
+      <!-- <lightning-button label="New" slot="actions"></lightning-button> -->
+
+​      <!-- <lightning-datatable
+​        key-field="id"
+​        columns={columns}
+​        data={carsList}
+​        hide-checkbox-column="true"
+
+> </lightning-datatable> -->
+>
+> <div class="wrapper" if:true={carsList}>
+>         <template for:each={carsList} for:item="car">
+>           <lightning-card key={car.Id} title={car.Name}>
+>             <div class="car-card-body">
+>               <p>Modelo: {car.Model__c}</p>
+>               <p>ArCondicionado: {car.Air_Conditioner__c}</p>
+>               <p>Tipo: {car.Type__c}</p>
+>               <p>Nome: car.Name</p>
+>             </div>
+>           </lightning-card>
+>         </template>
+>       </div>
+
+      <div class="wrapper" if:true={carsList}>
+        <template for:each={carsList} for:item="car">
+          <lightning-card key={car.Id} title={car.Name}>
+            <div class="car-card-body">
+              <p>Modelo: {car.Model__c}</p>
+              <p>ArCondicionado: {car.Air_Conditioner__c}</p>
+              <p>Tipo: {car.Type__c}</p>
+              <p>Type: {movie.Genero__c}</p>
+            </div>
+          </lightning-card>
+        </template>
+      </div>
+
+​    </lightning-card>
+  </template>
