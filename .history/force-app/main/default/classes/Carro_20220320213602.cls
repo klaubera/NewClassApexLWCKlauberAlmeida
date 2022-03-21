@@ -3,7 +3,7 @@ public with sharing class Carro {
     //Atributo do carro
     public String modelo {get; set;}
     public String cor {get; set;}
-    public Boolean ligado {get; set;}
+    public Boolean ligado {get; set}
     public Integer velocidadeCarro {get; set;}
     public Boolean estadoPorta {get; set;}
 

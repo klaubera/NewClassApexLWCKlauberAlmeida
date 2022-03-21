@@ -1,7 +1,7 @@
 public with sharing class Motorista {
     public static void carrodoMotorista() {
 
-        Carro carro1 = new Carro();
+        Carro carro1 = Carro();
         carro1.modelo = 'Fusca';
         carro1.cor = 'Preto';
         carro1.ligado = true;
@@ -12,7 +12,7 @@ public with sharing class Motorista {
         Boolean aceleraCarro1 = carro1.acelerar(carro1.velocidadeCarro);
         system.debug('Acelerou o carro? '+aceleraCarro1);
 
-        Carro carro2 = new Carro();
+        Carro carro2 = Carro();
         carro2.modelo = 'Opala';
         carro2.cor = 'Rosa';
         carro2.ligado = true;
