@@ -16,12 +16,12 @@ public with sharing class Motorista {
         carro2.modelo = 'Opala';
         carro2.cor = 'Rosa';
         carro2.ligado = true;
-        // carro2.carGasolina = true;
+        // carro1.carGasolina = true;
         carro2.velocidadeCarro = 10;
         carro2.estadoPorta = false;
         system.debug('O modelo do carro 2 é '+carro2.modelo);
         system.debug('carro2 '+carro2);
-        // system.debug('O carro tem gasolina? '+carro2.carGasolina);
+        // system.debug('O carro tem gasolina? '+carro1.carGasolina);
         Boolean aceleraCarro2 = carro2.acelerar(carro2.velocidadeCarro);
         system.debug('Acelerou o carro? '+aceleraCarro2);
 
