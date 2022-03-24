@@ -10,10 +10,10 @@ trigger ContactTrigger on Contact (after insert) {
         }
 
         //exemplo usando list
-        List<Account> accountList = new List<Account>([SELECT Id, Email__c FROM Account WHERE Id IN : idsContasSet]);
+        List<Account> accountList = new List<Account>([SELECT Id FROM Account]);
 
         //Exemplo do Map
-        Map<Id, Account> accountMap = new Map<Id, Account>([SELECT Id, Email__c FROM Account WHERE Id IN :idsContasSet]);
+        Map<Id, Account> accountMap = new Map<Id, Account>([SELECT Id, Email FROM Account WHERE Id IN :idsContasSet]);
 
         List<Messaging.SingleEmailMessage> emailList = new List<Messaging.SingleEmailMessage>();
 
@@ -27,7 +27,7 @@ trigger ContactTrigger on Contact (after insert) {
                     }
                 }
             }*/
-            emailCliente = accountMap.containsKey(cTemp.AccountId) ? accountMap.get(cTemp.AccountId).Email__c : null;
+            emailCliente = accountMap.containsKey(cTemp.AccountId) ? accountMap.get(cTemp.AccountId).Email : null;
 
             /*if(accountMap.containsKey(cTemp.AccountId)){
                 emailCliente = accountMap.get(cTemp.AccountId).Email;
