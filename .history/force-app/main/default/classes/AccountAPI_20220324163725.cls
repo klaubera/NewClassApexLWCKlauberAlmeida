@@ -12,7 +12,7 @@ global with sharing class AccountAPI {
         //https://playful-panda-6d1pua-dev-ed.my.salesforce.com/services/apexrest/AulaDeApex/Leads?
         String nome = String.IsNotBlank(asParamStr) ? RestContext.request.params.get('nome') : '';
         List<Account> AccList = new List<Account>();
-        if(String.IsNotBlank(nome)){
+        if(String.IsNotBlank(Account Name)){
             AccList = [SELECT Id, Name FROM Account WHERE Name = :'Edge Communications'];
         }else{
             AccList = [SELECT Id, Name FROM Account];
