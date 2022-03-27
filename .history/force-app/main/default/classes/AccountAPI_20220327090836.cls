@@ -35,7 +35,7 @@ global with sharing class AccountAPI {
             acctObj.Name = cTemp.Name;
             insertList.add(acctObj);
         }
-        // Se contem dados
+
         if(insertList.size() > 0){
             insert insertList;
         }
