@@ -1,0 +1,34 @@
+<template>
+
+    <template if:true={getAccountId}>
+            <lightning-card title="Lista de produtos" icon-name="custom:custom60">        
+                <div class="slds-m-horizontal_medium">
+                    <div class="c-container">
+                            <template for:each={productsObj.allDatas} for:item="cTemp">
+
+                                <lightning-layout-item 
+                                    size="4"
+                                    key={cTemp.Id}
+                                    padding="arround-small">
+                                    {cTemp.Id}
+                                    <br/>
+                                    <div class="slds-p-top_small">
+
+                                        <img src={cTemp.Product2.DisplayUrl} class="product 
+                                        slds_alignabsolut-center" width="150px" height="150px">
+                                        {cTemp.Product2.Name}
+                                
+                                    </div>
+
+                                    
+                                </lightning-layout-item>
+
+                            </template>
+                        
+                    </div>
+                    
+                </div>        
+            </lightning-card>
+               
+    </template>    
+</template>
