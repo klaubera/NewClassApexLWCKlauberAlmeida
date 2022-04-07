@@ -13,7 +13,6 @@ export default class ProductListItemsCard extends LightningElement {
         this._product = {id : value.Product2.Id, nome : value.Product2.Name, preco: value.UnitPrice, imagem : image};
 
     }
-
     handleProductSelected(){
         const productSelected = new CustomEvent("selected", {
             detail: JSON.stringify(this._product),
@@ -21,5 +20,4 @@ export default class ProductListItemsCard extends LightningElement {
         console.log('esta disparando o evento no componente filho');
         this.dispatchEvent(productSelected);
     }
-
 }

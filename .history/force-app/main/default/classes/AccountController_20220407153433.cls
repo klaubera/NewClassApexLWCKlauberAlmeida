@@ -1,4 +1,4 @@
-public with sharing class AccountController {
+public with sharing class ProductController {
     
     //Ele vai listar todos os produtos
     //Retornar o total de produtos listados

@@ -1,0 +1,33 @@
+<template>
+    <template if:true={getAccountId}>
+        <lightning-card title="Detalhes do carrinho" icon-name="custom:custom64">
+            <div class="slds-m-horizontal_medium">
+                <table>
+                    <thead>
+                        <th>Produto</th>
+                        <th>Preço Unitário</th>
+                        <th>Quantidade</th>
+                    </thead>
+                    <tbody>
+                        <template for:each={products} for:item="cTemp"
+                        for:index="productPosition">
+                            <tr key={cTemp.Id}>
+                                <td>
+                                    <p class="slds-text-title">{cTemp.nome}</p>
+                                </td>
+                                <td>
+                                    {cTemp.preco}
+                                </td>
+                                <td>
+                                    {cTemp.quantidade}
+                                </td>
+                            </tr>
+
+                        </template>
+                    </tbody>
+
+                </table>
+            </div>
+        </lightning-card>    
+    </template>
+</template>
